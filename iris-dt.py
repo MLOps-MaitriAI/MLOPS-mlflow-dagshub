@@ -7,9 +7,9 @@ from sklearn.datasets import load_iris
 import matplotlib.pyplot as plt
 import seaborn as sns
 import dagshub
-dagshub.init(repo_owner='Pradeep-research', repo_name='mlflow-dagshub-demo', mlflow=True)
+dagshub.init(repo_owner='MLOps-MaitriAI', repo_name='MLOPS-mlflow-dagshub', mlflow=True)
 
-mlflow.set_tracking_uri("https://dagshub.com/Pradeep-research/mlflow-dagshub-demo.mlflow")
+mlflow.set_tracking_uri("https://github.com/MLOps-MaitriAI/MLOPS-mlflow-dagshub.git")
 # Load the IRIS dataset
 data = load_iris()
 
@@ -19,7 +19,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 max_depth=10
 
-mlflow.set_experiment('iris-dt')
+mlflow.set_experiment('iris')
 # Log model hyperparameters and metrics to the MLflow server
 with mlflow.start_run():
     
